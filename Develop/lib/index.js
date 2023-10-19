@@ -29,15 +29,15 @@ inquirer
 
     // Testing code for different shapes
     const circle = new Circle();
-    circle.setColor('green');
+    circle.setColor('blue');
     console.log('Circle SVG:', circle.render());
 
     const triangle = new Triangle();
-    triangle.setColor('bisque');
+    triangle.setColor('green');
     console.log('Triangle SVG:', triangle.render());
 
     const square = new Square();
-    square.setColor('dodgerblue');
+    square.setColor('purple');
     console.log('Square SVG:', square.render());
   })
   .catch((error) => {
@@ -51,10 +51,10 @@ function generateSVG(shape, color, text) {
       svgShape = `<circle cx="150" cy="150" r="80" fill="${color}" />`;
       break;
     case 'square':
-      svgShape = `<square x="70" y="70" width="160" height="160" fill="${color}" />`;
+      svgShape = `<rect x="70" y="70" width="160" height="160" fill="${color}" />`;
       break;
     case 'triangle':
-      svgShape = `<triangle points="150,30 30,170 270,170" fill="${color}" />`;
+      svgShape = `<polygon points="150,30 30,170 270,170" fill="${color}" />`;
       break;
     default:
       svgShape = '';

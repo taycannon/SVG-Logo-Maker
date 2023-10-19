@@ -24,13 +24,13 @@ class Circle extends Shape{
 // Defines a Square that extends the shape
 class Square extends Shape{
   render(){
-      return `<square x="50" height="200" width="200" fill="${this.color}">`
+      return `<rect x="50" height="200" width="200" fill="${this.color}">`
   }
 }
 // Defines a Triangle that extends the shape 
 class Triangle extends Shape{
   render(){
-      return `<triangle height="100%" width="100%" points="0,200 300,200 150,0" fill="${this.color}">`
+      return `<polygon height="100%" width="100%" points="0,200 300,200 150,0" fill="${this.color}">`
   }
 };
 
